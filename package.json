@@ -1,0 +1,9 @@
+{
+  "name": "scoreturk-api",
+  "version": "1.0.0",
+  "description": "API proxy for ScoreTurk - proxies requests to API-Football",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
