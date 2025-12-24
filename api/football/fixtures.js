@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 
   try {
     // Get query parameters
-    const { league, season, date, team, from, to, status, live } = req.query;
+    const { league, season, date, team, from, to, status, live, last } = req.query;
     
     // Build query string
     const params = new URLSearchParams();
@@ -33,6 +33,7 @@ export default async function handler(req, res) {
     if (to) params.append('to', to);
     if (status) params.append('status', status);
     if (live) params.append('live', live);
+    if (last) params.append('last', last);
 
     const url = `${API_FOOTBALL_URL}/fixtures?${params.toString()}`;
     
